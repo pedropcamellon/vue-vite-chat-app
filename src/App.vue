@@ -44,9 +44,9 @@ function onSendMessage() {
     ...messages.value,
     {
       id: id++,
-      senderId: 1,
+      senderId: 0,
       body: newMessageBody.value,
-      created_at: "10:22 AM"
+      created_at: new Date().toLocaleTimeString("en-us", { hour: "2-digit", minute: "2-digit" })
     }
   ]
 }
@@ -92,7 +92,7 @@ function onSendMessage() {
 }
 
 .chat-room {
-  height: 90vh;
+  height: 70vh;
   padding: 1rem;
   margin: 0;
   overflow-y: scroll;
@@ -109,7 +109,7 @@ function onSendMessage() {
 }
 
 .sender {
-  /*  */
+  margin-left: auto;
 }
 
 .sender-body {
@@ -117,7 +117,7 @@ function onSendMessage() {
 }
 
 .not-sender {
-  margin-left: auto;
+  /*  */
 }
 
 .not-sender-body {
@@ -127,7 +127,7 @@ function onSendMessage() {
 .new-msg-form {
   display: flex;
   padding: 0.5rem 1rem;
-  background-color: azure;
+  background-color: rgb(115, 119, 119);
 }
 
 .new-msg-form__body {

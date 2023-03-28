@@ -7,3 +7,7 @@ body {
 input {
   border: none;
 }
+
+input:focus-visible {
+  outline: none;
+}
